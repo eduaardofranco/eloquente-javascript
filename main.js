@@ -94,5 +94,11 @@ for (var i = 1; i <= tamanho; i++) {
   }
 
   console.log(linha);
-
 }
+/**
+  Escreva uma função min que recebe dois argumentos e retorna o menor deles.
+ */
+var min = function(num1,num2) {
+    return Math.min(num1,num2);
+}
+console.log(min(10,2));
