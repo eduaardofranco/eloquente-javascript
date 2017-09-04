@@ -145,3 +145,27 @@ var countChar = function(word, letter) {
     return counter;
 };
 console.log(countChar('Eduardo', 'E'));
+
+/**
+ Escreva uma função chamada range que recebe dois argumentos, start (início) e end (fim), e retorna um array contendo todos os números
+ a partir do valor start até o valor end (incluindo-o).
+ Em seguida, escreva a função sum que recebe um array de números como argumento e retorna a soma desses números. Execute o programa 
+ anterior e veja se o resultado retornado é de fato 55.
+ */
+var range = function(start,end,step) {
+    if (!step) { step = 1; }
+    var array = [];
+    for (var i = start; start <= end ? i <= end : i >= end; i += step) {
+        array.push(i);
+    }
+    return array;
+};
+var sum = function(array) {
+    var s = 0;
+    for (var i = 0; i < array.length; i++) { 
+        s += array[i];
+    }
+    return s;
+};
+
+console.log(sum(range(1,10)));
