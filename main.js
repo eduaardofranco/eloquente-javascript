@@ -100,5 +100,48 @@ for (var i = 1; i <= tamanho; i++) {
  */
 var min = function(num1,num2) {
     return Math.min(num1,num2);
-}
+};
 console.log(min(10,2));
+
+/** Nós vimos que o % (operador resto) pode ser usado para testar se um número é par ou ímpar,
+usando % 2 para verificar se ele é divisível por dois. Abaixo, está uma outra maneira de definir se um número inteiro positivo é par ou ímpar:
+- Zero é par.
+- Um é ímpar.
+- Para todo outro número N, sua paridade é a mesma de N - 2.
+Defina uma função recursiva isEven que satisfaça as condições descritas acima. A função deve aceitar um número como 
+parâmetro e retornar um valor Booleano.
+*/
+var isEven = function(num) {
+    if( num % 2 === 0 ){
+        return;
+    }
+    else if( num % 2 != 0) {
+        return;
+    } else {
+        isEven(num);
+    }
+};
+isEven(-3);
+
+/**
+ Você pode acessar o N-ésimo caractere, ou letra, de uma string escrevendo "string".charAt(N), similar a como você acessa seu tamanho com "s".length.
+ O valor retornado será uma string contendo somente um caractere (por exemplo, "b"). O primeiro caractere está na posição zero, o que faz com que 
+ o último seja encontrado na posição string.length -1. Em outras palavras, uma string com dois caracteres possui tamanho (length) dois, e suas
+  respectivas posições são 0 e 1.
+
+Escreva uma função countBs que receba uma string como único argumento e retorna o número que indica quantos caracteres “B”, em maiúsculo, 
+estão presentes na string.
+
+Em seguida, escreva uma função chamada countChar que se comporta de forma parecida com countBs, exceto que ela recebe um segundo argumento 
+que indica o caractere que será contado (ao invés de contar somente o caractere “B” em maiúsculo). Reescreva countBs para fazer essa nova funcionalidade.
+ */
+var countChar = function(word, letter) {
+    var counter = 0;
+    for( i=0; i <= word.length; i++) {
+        if( word.charAt(i) == letter.toUpperCase()) {
+            counter = counter + 1;
+        }
+    }
+    return counter;
+};
+console.log(countChar('Eduardo', 'E'));
