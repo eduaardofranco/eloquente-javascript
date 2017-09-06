@@ -169,3 +169,14 @@ var sum = function(array) {
 };
 
 console.log(sum(range(1,10)));
+
+//função dentro de função
+
+function greaterThan(n) {
+    return function(m) {
+        return m > n ? false: true;
+    };
+}
+var greaterThan10 = greaterThan(10);
+console.log(greaterThan10(7));
+// → true
